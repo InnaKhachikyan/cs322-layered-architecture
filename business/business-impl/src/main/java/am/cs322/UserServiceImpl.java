@@ -24,7 +24,12 @@ public class UserServiceImpl implements UserService {
     public UserDTO getUser(Long id) {
         Optional<User>  user = userRepository.findById(id);
 
-        return new UserDTO(user.getFirstName() + " " + user.getLastName());
+        if (user.isPresent()) {
+            User actualUser = user.get();
+            return new UserDTO(actualUser.getFirstName() + " " + actualUser.getLastName());
+        } else {
+            throw new RuntimeException("User not found");
+        }
     }
 
 
