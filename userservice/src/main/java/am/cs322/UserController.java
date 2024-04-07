@@ -7,6 +7,4 @@ public interface UserController {
 
     public UserDTO createUser(CreateUserRequest request);
 
-    public UserDTO getUser(Long id);//todo
-
 }

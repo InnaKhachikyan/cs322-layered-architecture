@@ -3,7 +3,6 @@ package am.cs322;
 import am.cs322.model.User;
 import am.cs322.model.UserDTO;
 import org.springframework.stereotype.Service;
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -20,12 +19,4 @@ public class UserServiceImpl implements UserService {
         User createdUser = userRepository.save(new User(firstName, lastName));
         return new UserDTO(createdUser.getFirstName() + " " + createdUser.getLastName());
     }
-
-    public UserDTO getUser(Long id) {
-        Optional<User>  user = userRepository.findById(id);
-
-        return new UserDTO(user.getFirstName() + " " + user.getLastName());
-    }
-
-
 }
