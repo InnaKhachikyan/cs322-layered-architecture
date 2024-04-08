@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO createUser(String firstName, String lastName) {
         User createdUser = userRepository.save(new User(firstName, lastName));
+        System.out.println(createdUser.getID());
         return new UserDTO(createdUser.getFirstName() + " " + createdUser.getLastName());
     }
 

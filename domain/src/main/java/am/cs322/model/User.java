@@ -23,6 +23,11 @@ public class User {
         this.lastName = lastName;
     }
 
+    //added by me
+    public Long getID() {
+        return id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

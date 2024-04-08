@@ -17,6 +17,7 @@ public class UserControllerImpl implements UserController {
     @Override
     @PostMapping
     public UserDTO createUser(@RequestBody CreateUserRequest request) {
+        //System.out.println(request.toString());
         return userService.createUser(request.firstName(), request.lastName());
     }
 
