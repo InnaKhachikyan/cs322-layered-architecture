@@ -1,4 +1,4 @@
-package am.cs322;
+package am.cs322bankaccount;
 import am.cs322bankaccount.model.*;
 
 public interface BankAccountService {
