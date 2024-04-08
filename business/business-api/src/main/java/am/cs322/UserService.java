@@ -6,4 +6,5 @@ public interface UserService {
 
     public UserDTO createUser(String firstName, String lastName);
 
+    public UserDTO getUser(Long id);
 }
